@@ -1,7 +1,7 @@
 # PRLegVotos
 Información sobre las votaciones de medidas legislativas de Puerto Rico.
 
-### Senado (Versión Preliminar)
+### Senado
 - Votaciones de cada medida legislativa desde 2009 - 2016
 - `Senate Votes.R` es el programa que consigue y salva la información.
 - Cada cuatrineo tiene los siguientes archivos
