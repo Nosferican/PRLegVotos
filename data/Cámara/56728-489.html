@@ -1,0 +1,1592 @@
+<!DOCTYPE html>
+<html  lang="es-PR">
+<head id="Head">
+<!--**********************************************************************************-->
+<!-- DotNetNuke - http://www.dotnetnuke.com                                          -->
+<!-- Copyright (c) 2002-2013                                                          -->
+<!-- by DotNetNuke Corporation                                                        -->
+<!--**********************************************************************************-->
+<title>
+	Votaciones
+</title><meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><meta content="text/javascript" http-equiv="Content-Script-Type" /><meta content="text/css" http-equiv="Content-Style-Type" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta id="MetaKeywords" name="KEYWORDS" content=",DotNetNuke,DNN" /><meta id="MetaCopyright" name="COPYRIGHT" content="Copyright 2018 by Cámara de Representantes de Puerto Rico" /><meta id="MetaGenerator" name="GENERATOR" content="DotNetNuke " /><meta id="MetaAuthor" name="AUTHOR" content="Camara Website" /><meta name="RESOURCE-TYPE" content="DOCUMENT" /><meta name="DISTRIBUTION" content="GLOBAL" /><meta id="MetaRobots" name="ROBOTS" content="INDEX, FOLLOW" /><meta name="REVISIT-AFTER" content="1 DAYS" /><meta name="RATING" content="GENERAL" /><meta http-equiv="PAGE-ENTER" content="RevealTrans(Duration=0,Transition=1)" /><style id="StylePlaceholder" type="text/css"></style><link href="/dnncamara/Portals/_default/default.css?cdv=39" type="text/css" rel="stylesheet"/><link href="/dnncamara/Portals/_default/Skins/Camara/skin.css?cdv=39" type="text/css" rel="stylesheet"/><link href="/dnncamara/Portals/_default/Containers/Camara/container.css?cdv=39" type="text/css" rel="stylesheet"/><link href="/dnncamara/Portals/9/portal.css?cdv=39" type="text/css" rel="stylesheet"/><script src="/dnncamara/Resources/Shared/Scripts/jquery/jquery.min.js?cdv=39" type="text/javascript"></script><script src="/dnncamara/Resources/Shared/Scripts/jquery/jquery-ui.min.js?cdv=39" type="text/javascript"></script><link rel='SHORTCUT ICON' href='/dnncamara/Portals/9/Images/favicon.ico' type='image/x-icon' />     
+        
+			    <script type="text/javascript">
+			      var _gaq = _gaq || [];
+			      _gaq.push(['_setAccount', 'UA-96102887-1']);
+			      _gaq.push(['_trackPageview']);
+			 
+			      (function() {
+				    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			      })();
+			    </script>
+        
+		  <link href="/dnncamara/WebResource.axd?d=Xqkx5hLuh42CKsM6sA2ztW-PyVEUcpEeTHmkcPhEQ0zLBVOi5Q1x-PZ0LVrAs0aUPDLBnpEXfh8ST689wy6K4SMS5nlN_aJLqkPOcne7c5stW8tN91JqmJ3H2Rr9uMxqYmbOVw2&amp;t=636662326044831879" type="text/css" rel="stylesheet" /></head>
+<body id="Body">
+    
+    <form method="post" action="/dnncamara/web/actividadlegislativa/votaciones.aspx?measureid=56728&amp;voteid=489" id="Form" enctype="multipart/form-data">
+<input type="hidden" name="StylesheetManager_TSSM" id="StylesheetManager_TSSM" value="" />
+<input type="hidden" name="ScriptManager_TSM" id="ScriptManager_TSM" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+
+
+<script src="/dnncamara/Telerik.Web.UI.WebResource.axd?_TSM_HiddenField_=ScriptManager_TSM&amp;compress=1&amp;_TSM_CombinedScripts_=%3b%3bAjaxControlToolkit%2c+Version%3d4.1.51116.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d28f01b0e84b6d53e%3aen-US%3afd384f95-1b49-47cf-9b47-2fa2a921a36a%3aea597d4b%3ab25378d2%3bDotNetNuke.WebUtility%3aen-US%3a0fb17705-2027-44c8-9ca5-8951900c3d8d%3abb916db2" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="51D2952B" />
+<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="legOwVwYnCvkw5Z9SQJYGCqt99BV7Qfoy3lpq79Hago+39z+2V959AeMpBiBV12adlBL/uvpDfquyAHZXftagHi6IDStncnpFEXzfaaO21AV3mhBuztujLUNX0XnfydUfumr+60ViUqQrv+1EuOydPlHga13O9cFepUE/ASeAC6Iz8ZJRb0QZcM+MHjlEmzY4SZGduEsl3IuCfDLEKqBozKWCfwh2PrQyEPEUkDu1onVbsnVXy8MxdEPgWA=" /><script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ScriptManager', 'Form', [], [], [], 90, '');
+//]]>
+</script>
+
+        <script src="/dnncamara/js/Debug/dnn.modalpopup.js?cdv=39" type="text/javascript"></script><script src="/dnncamara/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js?cdv=39" type="text/javascript"></script><script src="/dnncamara/Resources/Shared/Scripts/dnn.jquery.js?cdv=39" type="text/javascript"></script><script src="/dnncamara/js/Debug/dnncore.js?cdv=39" type="text/javascript"></script>
+        
+        
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+    <link href="../../Portals/_default/Skins/Camara/stylesheets/jquery-ui-1.10.3.custom.css"
+        rel="stylesheet" />
+    <link href="../../Portals/_default/Skins/Camara/stylesheets/tipsy.css"
+        rel="stylesheet" />
+    <script type="text/javascript" src='../../js/jquery.selectbox-0.2.min.js'></script>
+    <script type="text/javascript" src='../../js/jquery.ui.datepicker-es.js'></script>
+    <script type="text/javascript" src='../../js/jquery.ui.datepicker.js'></script>
+    <script type="text/javascript" src='../../js/jquery.tipsy.js'></script>
+    <script type="text/javascript" src='../../js/jquery.main.js'></script>
+     <script type="text/javascript">
+         var streamProxyUrl = '../../streamproxy.aspx';
+    </script>
+    <script type="text/javascript" src='../../js/ustream.js'></script>
+    <script src="http://jwpsrv.com/library/5zUK5NyCEeOD9CIACi0I_Q.js"></script>
+</head>
+<div id="siteWrapper">
+    <div id="userControls" class="wrapper">
+        
+        <!---/search-->
+        
+        <!--/login-->
+        <div class="clear">
+        </div>
+    </div>
+    <!--/userControls-->
+    
+    <div id="header">
+        <div class="header-t">
+           <a alt="home" href="../inicio.aspx"><img class="logo" src="../../images/logo.png" 
+			 Title="Logo C&aacute;mara de Representantes Estado Libre Asociado de Puerto Rico" alt="Logo C&aacute;mara de Representantes"></img></a>
+            <div class="container">
+                <div id="dnn_FacebookLinkContent" class="DNNEmptyPane">
+                </div>
+                <ul class="tools">
+                    <li><a href="#" id="decrease" class="small">a</a> <a id="increase" href="#">a</a>
+                    </li>
+                    <li class="sitemap"><a href="#">Sitemap</a></li>
+                    <li class="email"><a href="mailto:info@camaraderepresentantes.org">Email</a> </li>
+                    <li id="LiveTop" class="OffLive"><a Title="Canal En Vivo Apagado" href="/dnncamara/web/envivo.aspx">Camara En Vivo</a></li>
+                </ul>
+                <div class="search-form">
+                    <div class="fieldset">
+                        
+						
+                        <span id="dnn_dnnSearch_ClassicSearch">
+    
+    
+	<label for="dnn_dnnSearch_txtSearch"><span class="screenreader">B&uacute;squeda Principal</span></label>
+    <input name="dnn$dnnSearch$txtSearch" type="text" maxlength="255" size="20" id="dnn_dnnSearch_txtSearch" class="NormalTextBox" onkeydown="return __dnn_KeyDown(&#39;13&#39;, &#39;javascript:__doPostBack(%27dnn$dnnSearch$cmdSearch%27,%27%27)&#39;, event);" />
+	<a id="dnn_dnnSearch_cmdSearch" class="SearchButton" href="javascript:__doPostBack(&#39;dnn$dnnSearch$cmdSearch&#39;,&#39;&#39;)">Search</a>
+</span>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navbar">
+            <div class="holder">
+                <!-- DDRmenu v02.00.01 - Simple template --><!--SEO NOINDEX-->
+
+    <ul id="nav">
+	    
+	<li class="">
+		
+		<a href="http://www.tucamarapr.org/dnncamara/web/Inicio.aspx" target="">Inicio</a>
+		
+	</li>
+
+	<li class="">
+		
+		<a href="http://www.tucamarapr.org/dnncamara/web/ActividadLegislativa/SesionesyVistas.aspx" target="">Actividad Legislativa</a>
+		
+           
+			    <ul>
+				    
+	<li class="">
+		
+			<a href="http://www.tucamarapr.org/dnncamara/web/ActividadLegislativa/SesionesyVistas.aspx" target="">Sesiones y Vistas</a>
+		
+	</li>
+
+	<li class=" active">
+		
+			<a href="http://www.tucamarapr.org/dnncamara/web/ActividadLegislativa/Votaciones.aspx" target="">Votaciones</a>
+		
+	</li>
+
+	<li class="">
+		
+			<a href="http://www.tucamarapr.org/dnncamara/web/ActividadLegislativa/ComisionesyProyectosEspeciales.aspx" target="">Comisiones y Proyectos Especiales</a>
+		
+	</li>
+
+	<li class="">
+		
+			<a href="http://www.tucamarapr.org/dnncamara/web/ActividadLegislativa/TramiteLegislativo.aspx" target="">Tramite Legislativo</a>
+		
+	</li>
+
+	<li class="">
+		
+			<a href="http://www.tucamarapr.org/dnncamara/web/ActividadLegislativa/Asistencia.aspx" target="">Asistencia</a>
+		
+	</li>
+
+	<li class="">
+		
+			<a href="http://www.tucamarapr.org/dnncamara/web/ActividadLegislativa/Noticias.aspx" target="">Noticias</a>
+		
+	</li>
+
+	<li class="">
+		
+			<a href="http://www.tucamarapr.org/dnncamara/web/ActividadLegislativa/Cabilderos.aspx" target="">Cabilderos</a>
+		
+	</li>
+
+	<li class="">
+		
+			<a href="http://www.tucamarapr.org/dnncamara/web/Prensa/TuC&#225;maraenVivo.aspx" target="">Tu C&#225;mara En Vivo</a>
+		
+	</li>
+
+			    </ul>
+           
+		
+	</li>
+
+	<li class="">
+		
+		<a href="http://tucamarapr.org/dnncamara/Presidencia/OrdenesAdministrativas.aspx" target="">Presidencia</a>
+		
+           
+			    <ul>
+				    
+	<li class="">
+		
+			<a href="http://tucamarapr.org/dnncamara/ComposiciondelaCamara/biografia.aspx?rep=39" target="">Biograf&#237;a del Presidente</a>
+		
+	</li>
+
+	<li class="">
+		
+			<a href="http://www.tucamarapr.org/dnncamara/web/Presidencia/OrdenesAdministrativas.aspx" target="">Ordenes Administrativas</a>
+		
+	</li>
+
+			    </ul>
+           
+		
+	</li>
+
+	<li class="">
+		
+			<a><span>Composicion de la Camara</span></a>
+		
+           
+			    <ul>
+				    
+	<li class="">
+		
+			<a href="http://www.tucamarapr.org/dnncamara/web/ComposiciondelaCamara/Biografia.aspx" target="">Biografia</a>
+		
+	</li>
+
+	<li class="">
+		
+			<a href="http://www.tucamarapr.org/dnncamara/web/ComposiciondelaCamara/HistoriadelaCamara.aspx" target="">Historia de la Camara</a>
+		
+	</li>
+
+			    </ul>
+           
+		
+	</li>
+
+	<li class="">
+		
+		<a href="http://www.tucamarapr.org/dnncamara/web/LACASAGRANDE.aspx" target="">Informaci&#243;n de la C&#225;mara</a>
+		
+           
+			    <ul>
+				    
+	<li class="">
+		
+			<a href="http://tucamarapr.org/dnncamara/web/ComposiciondelaCamara.aspx#rep" target="">Contacto con Representantes</a>
+		
+	</li>
+
+	<li class="">
+		
+			<a href="http://www.tucamarapr.org/dnncamara/web/Informaci&#243;ndelaC&#225;mara/CompartetusIdeas.aspx" target="">Comparte tus Ideas</a>
+		
+	</li>
+
+	<li class="">
+		
+			<a href="http://www.tucamarapr.org/dnncamara/web/Informaci&#243;ndelaC&#225;mara/Capitolio.aspx" target="">Capitolio</a>
+		
+	</li>
+
+	<li class="">
+		
+			<a href="http://www.tucamarapr.org/dnncamara/web/Informaci&#243;ndelaC&#225;mara/Enlaces.aspx" target="">Enlaces</a>
+		
+	</li>
+
+	<li class="">
+		
+			<a href="http://www.tucamarapr.org/dnncamara/web/Informaci&#243;ndelaC&#225;mara/OfertasdeEmpleos.aspx" target="">Ofertas de Empleos</a>
+		
+	</li>
+
+			    </ul>
+           
+		
+	</li>
+
+    </ul>
+
+<!--END SEO-->
+
+
+
+            </div>
+        </div>
+        <!--/nav-->
+    </div>
+    <!--/siteHeadouter-->
+    <div id="contentWrapper" class="wrapper">
+        <div id="main">
+            <div id="content">
+                <div id="dnn_contentPane" class="contentPane">
+                <div class="DnnModule DnnModule-DNN_HTML DnnModule-1319"><a name="1319"></a></div><div class="DnnModule DnnModule-WebVoteMeasures DnnModule-1360"><a name="1360"></a>
+<div class="DNNContainer_noTitle">
+	<div id="dnn_ctr1360_ContentPane"><!-- Start_Module_1360 --><div id="dnn_ctr1360_ModuleContent" class="DNNModuleContent ModWebVoteMeasuresC">
+	
+<script type="text/javascript">
+    function slideRight(MyUrl) {
+        //alert(MyUrl);
+        //var MyUrl = "http://www.google.com.pr/?gws_rd=cr";
+        window.open(MyUrl);
+        //dnnModal.show(MyUrl + '?popUp=true', true , 550, 950, true);
+    }
+
+    $(document).ready(function () {
+
+        $("#ancPopUp").click(function () {
+            dnnModal.show(MyUrl + '?popUp=true', false, 1200, 100, false);
+            return false;
+        });
+    });
+</script>
+
+<body>
+    <div id="wrapper">
+        <div id="main">
+            <div id="content">
+                <ul class="breadcrumbs">
+                    <li>
+                        <a id="dnn_ctr1360_ViewWebVoteMeasures_WebVoteMeasures1_lntbnMeasures" href="javascript:__doPostBack(&#39;dnn$ctr1360$ViewWebVoteMeasures$WebVoteMeasures1$lntbnMeasures&#39;,&#39;&#39;)">VOTACIÓN</a></li>
+                </ul>
+                
+                <div id="dnn_ctr1360_ViewWebVoteMeasures_WebVoteMeasures1_pnlMeasure" class="no-dots">
+		
+                    <div class="three-cols">
+                        <div class="col">
+                            <span class="Commission-literals">
+                                Medida</span><br />
+                            <span class="Commission-bold">
+                                Nombre: </span>
+                            P S0628<br />
+                            <br />
+                            <span class="Commission-bold">
+                                Fecha Radicada: </span>
+                            11/14/2013<br />
+                        </div>
+                        <div class="col">
+                            <span class="Commission-literals">
+                                Autores</span><br />
+                            <span class="Commission-bold">
+                                Autor: </span>
+                            <br />
+                            <span class="Commission-bold">
+                                Co-Autores: </span>
+                            
+                        </div>
+                        <div class="col">
+                            <span class="Commission-literals">
+                                Informe de Votación</span><br />
+                            <a id="dnn_ctr1360_ViewWebVoteMeasures_WebVoteMeasures1_hyperDoc" target="_blank"></a>
+                            <input type="image" name="dnn$ctr1360$ViewWebVoteMeasures$WebVoteMeasures1$imgbtnReport" id="dnn_ctr1360_ViewWebVoteMeasures_WebVoteMeasures1_imgbtnReport" src="/dnncamara/images/report.png" alt="informe de votación" />
+                            <br />
+                            <br />
+                            <br />
+                            <span class="Commission-bold">
+                                Fecha Votación: </span>
+                            2/19/2014
+                        </div>
+                    </div>
+                    <div class="row">
+                    </div>
+                    <div class="four-cols">
+                        <div class="col">
+                            <span class="Commission-literals">
+                                <span id="dnn_ctr1360_ViewWebVoteMeasures_WebVoteMeasures1_lblVoteTypes">Tipos de Votos:</span>
+                            </span>
+                            <br />
+                            <span class="Commission-bold">
+                                <span id="dnn_ctr1360_ViewWebVoteMeasures_WebVoteMeasures1_lblInFavor">A Favor:</span></span>
+                            51
+                        </div>
+                        <div class="col">
+                            <br />
+                            <br />
+                            <span class="Commission-bold">
+                                <span id="dnn_ctr1360_ViewWebVoteMeasures_WebVoteMeasures1_lblAgainst">En Contra:</span></span>
+                            0
+                        </div>
+                        <div class="col">
+                            <br />
+                            <br />
+                            <span class="Commission-bold">
+                                <span id="dnn_ctr1360_ViewWebVoteMeasures_WebVoteMeasures1_lblAbstained">Abstenido:</span></span>
+                            0
+                        </div>
+                        <div class="col">
+                            <br />
+                            <br />
+                            <span class="Commission-bold">
+                                <span id="dnn_ctr1360_ViewWebVoteMeasures_WebVoteMeasures1_lblAbsent">Ausente:</span></span>
+                            0
+                        </div>
+                    </div>
+                
+	</div>
+                
+                <div id="dnn_ctr1360_ViewWebVoteMeasures_WebVoteMeasures1_pnlTable">
+		
+                    <div class="dotted-line">
+                        <br />
+                        <ul class="list-votes">
+                            
+                                    <table class="measuresvote-table" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr class="customheadervotes">
+                                                <th>
+                                                    <span class="bold">
+                                                        <span id="dnn_ctr1360_ViewWebVoteMeasures_WebVoteMeasures1_rptHistory_lblRep">Representante</span></span>
+                                                </th>
+                                                <td>
+                                                    <span class="bold">
+                                                        <span id="dnn_ctr1360_ViewWebVoteMeasures_WebVoteMeasures1_rptHistory_lblVote">Votación</span></span>
+                                                </td>
+                                                
+                                            </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Aponte Dalmau, Javier A.
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Aponte Hernández, José F.
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Báez Rivera, Jose L.
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Bianchi Angleró, Carlos A.
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Bulerín Ramos, Angel
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Charbonier Laureano, María M.
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Cruz Burgos, Ramón L.
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. De Jesús Rodríguez, Efraín
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Franco González, Armando
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Gándara Menéndez, Luisa
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. González Colón, Jenniffer A.
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Hernández Alfonzo, César
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Hernández Alvarado, Urayoán
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Hernández López, Carlos M.
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Hernández Montañez, Rafael
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Jaime Espinosa, Narden
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. León Rodríguez, Luis G.
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Llerandi Cruz, Ricardo J.
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. López de Arrarás, Brenda
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. López Muñoz, José
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Matos García, Angel N.
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Meléndez Ortiz, José E.
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Méndez Núñez, Carlos "Johnny"
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Méndez Silva, Lydia
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Muñoz Suárez, Angel
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Natal Albelo, Manuel A.
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Navarro Suárez, Jorge
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Ortiz Lugo, Luis R.
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Pacheco Irigoyen, Sonia I.
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Peña Ramírez, Ángel R.
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Perelló Borrás, Jaime R.
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Pérez Ortiz, Luis
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Quiles Rodríguez, Waldemar
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Ramos Rivera, María de Lourdes
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Rivera Ortega, Rafael
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Rivera Ruiz De Porras, Roberto
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Rodríguez Aguiló, Gabriel
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Rodríguez Miranda, Angel E.
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Rodríguez Quiles, José A.
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Santa Rodríguez, Jesús
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Santiago Guzman, Pedro J.
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Silva Delgado, Antonio
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Soto Torres, Antonio L.
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Torres Calderón, Héctor A.
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Torres Cruz, Luis R.
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Torres Ramírez, José R.
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Torres Yordán, Nelson
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Varela Fernández, José M.
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Vargas Ferrer, Carlos J.
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Vassallo Anadón, Víctor L.
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    <tr>
+                                        <li>
+                                            <th>
+                                                Hon. Vega Ramos, Luis R.
+                                            </th>
+                                            <td>
+                                                A Favor
+                                            </td>
+                                            
+                                        </li>
+                                    </tr>
+                                
+                                    </tbody> </table>
+                                
+                        </ul>
+                    </div>
+                
+	</div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+
+
+
+</div><!-- End_Module_1360 --></div>
+	<div class="clear"></div>
+</div>
+</div></div>
+            </div>
+            <div id="sidebar">
+                <div id="dnn_Calendar">
+                <div class="DnnModule DnnModule-WebSideBar DnnModule-1356"><a name="1356"></a>
+<div class="DNNContainer_noTitle">
+	<div id="dnn_ctr1356_ContentPane"><!-- Start_Module_1356 --><div id="dnn_ctr1356_ModuleContent" class="DNNModuleContent ModWebSideBarC">
+	
+<script type="text/javascript">
+    var dnncHttpAlias = 'http://www.tucamarapr.org/dnncamara/web';
+    var dnnCalendarHttpAlias = dnncHttpAlias + '/prensa/calendario.aspx';
+    var dnnCalendarAjaxAlias = dnncHttpAlias + '/../ajaxcalendar.aspx';
+
+</script>
+<script type="text/javascript">
+    function OpenUrl(MyUrl) {
+        window.open(MyUrl);
+    }
+</script>
+<style>
+    .SpecialOrder
+    {
+        text-align: center;
+        margin-top: -2px;
+    }
+    .SpecialOrder a
+    {
+        background: #434343;
+        color: white;
+        border-radius: 5px;
+        padding: 5px 20px;
+        box-shadow: 0px 0px 0px 2px gray;
+        position: relative;
+        transition: All .3s;
+    }
+    .SpecialOrder a:hover
+    {
+        background: #325329;
+        padding: 5px 12px;
+        box-shadow: 0px 0px 4px 0px #474747;
+    }
+</style>
+<div class="activities">
+    <h2>
+        ACTIVIDADES (<span id="calCYear"></span>)</h2>
+    <div id="sideCalendar" class="calendar">
+        <div style="display: none;" id="caldatadump">
+        </div>
+        <span class="active-dates">
+            ;2018, 11, 1|RE - R C0749 , ;2018, 11, 2|RE - R C0731 , ;2018, 11, 3|RE - R C0853 , VO - R C1045 , ;2018, 11, 4|RE - R C0869 , VP - R C1031 , ;2018, 11, 5|RE - R C0718 , RE - R C0011 , VO - R C0138 , ;2018, 11, 6|RE - P C1190 , ;2018, 11, 7|RE - R C0805 , </span>
+        <div class="datepicker">
+        </div>
+    </div>
+    <div id="loadingCalendar">
+        &nbsp;</div>
+    <br />
+    <div class="SpecialOrder">
+        <a id="dnn_ctr1356_ViewWebCalendar_WebCalendar1_lbSpecialOrder" href="javascript:__doPostBack(&#39;dnn$ctr1356$ViewWebCalendar$WebCalendar1$lbSpecialOrder&#39;,&#39;&#39;)">Vér último calendario de ordenes especiales</a>
+    </div>
+</div>
+
+
+
+</div><!-- End_Module_1356 --></div>
+	<div class="clear"></div>
+</div>
+</div></div>
+                <div id="dnn_LawsContent" class="DNNEmptyPane">
+                </div>
+                <div id="dnn_LiveContent">
+                <div class="DnnModule DnnModule-DNN_HTML DnnModule-1147"><a name="1147"></a>
+<div class="live">
+    <div id="dnn_ctr1147_ContentPane">
+    <!-- Start_Module_1147 --><div id="dnn_ctr1147_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr1147_HtmlModule_lblContent" class="Normal">
+		<a id="ustreamLiveBtn" href="/dnncamara/web/prensa/tucámaraenvivo.aspx">LA C&Aacute;MARA EN VIVO</a>
+	</div>
+
+</div><!-- End_Module_1147 --></div>
+</div>
+</div></div>
+                <div class="public-views">
+                    <div id="dnn_PublicViewContent">
+                    <div class="DnnModule DnnModule-WebSideBar DnnModule-1357"><a name="1357"></a>
+<div class="DNNContainer_noTitle">
+	<div id="dnn_ctr1357_ContentPane"><!-- Start_Module_1357 --><div id="dnn_ctr1357_ModuleContent" class="DNNModuleContent ModWebSideBarC">
+	
+<div class="public-views">
+    <h2>
+        VISTAS</h2>
+    <div class="scrollable-area">
+        <div id="marqueecontainer" onmouseover="copyspeed=pausespeed" onfocus="copyspeed=pausespeed" onmouseout="copyspeed=marqueespeed" onblur="copyspeed=marqueespeed">
+            <div id="vmarquee" >
+                <ul class="list-views">
+                    
+                            
+<li><em class="date">
+    7
+    de
+    diciembre
+    del
+    2018</em><br />
+    
+
+        <li><a href='tramitelegislativo.aspx?measureid=65366'>
+            <span class="time">
+                10:00 AM</span> <span class="office">
+                    [Reunión Ejecutiva] Comisión de Asuntos Internos</span> <span class="address">
+                        Oficina de la Comisión                                      <br /><span class="ViewMeasure">R C0805</span></span> </a></li>
+    
+
+                        
+                            
+<li><em class="date">
+    8
+    de
+    diciembre
+    del
+    2018</em><br />
+    </li>
+    <span class="NoEvents">No hay vistas registradas.</span>
+
+
+                        
+                            
+<li><em class="date">
+    9
+    de
+    diciembre
+    del
+    2018</em><br />
+    </li>
+    <span class="NoEvents">No hay vistas registradas.</span>
+
+
+                        
+                            
+<li><em class="date">
+    10
+    de
+    diciembre
+    del
+    2018</em><br />
+    </li>
+    <span class="NoEvents">No hay vistas registradas.</span>
+
+
+                        
+                            
+<li><em class="date">
+    11
+    de
+    diciembre
+    del
+    2018</em><br />
+    </li>
+    <span class="NoEvents">No hay vistas registradas.</span>
+
+
+                        
+                            
+<li><em class="date">
+    12
+    de
+    diciembre
+    del
+    2018</em><br />
+    </li>
+    <span class="NoEvents">No hay vistas registradas.</span>
+
+
+                        
+                            
+<li><em class="date">
+    13
+    de
+    diciembre
+    del
+    2018</em><br />
+    </li>
+    <span class="NoEvents">No hay vistas registradas.</span>
+
+
+                        
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+
+
+
+    var delayb4scroll = 0 //Specify initial delay before marquee starts to scroll on page (2000=2 seconds)
+    var marqueespeed = 1 //Specify marquee scroll speed (larger is faster 1-10)
+    var pauseit = 1 //Pause marquee onMousever (0=no. 1=yes)?
+
+    ////NO NEED TO EDIT BELOW THIS LINE////////////
+
+    var copyspeed = marqueespeed
+    var pausespeed = (pauseit == 0) ? copyspeed : 0
+    var actualheight = ''
+
+    function scrollmarquee() {
+        if (parseInt(cross_marquee.style.top) > (actualheight * (-1) + 8)) //if scroller hasn't reached the end of its height
+            cross_marquee.style.top = parseInt(cross_marquee.style.top) - copyspeed + "px" //move scroller upwards
+        else //else, reset to original position
+            cross_marquee.style.top = parseInt(marqueeheight) + 8 + "px"
+    }
+
+    function initializemarquee() {
+        cross_marquee = document.getElementById("vmarquee")
+        cross_marquee.style.top = 0
+        marqueeheight = 172//document.getElementById("marqueecontainer").offsetHeight
+        actualheight = cross_marquee.offsetHeight //height of marquee content (much of which is hidden from view)
+        if (window.opera || navigator.userAgent.indexOf("Netscape/7") != -1) { //if Opera or Netscape 7x, add scrollbars to scroll and exit
+            cross_marquee.style.height = marqueeheight + "px"
+            cross_marquee.style.overflow = "scroll"
+            return
+        }
+        setTimeout('lefttime=setInterval("scrollmarquee()",30)', delayb4scroll)
+    }
+    $(function () {
+        if (window.addEventListener)
+            window.addEventListener("load", initializemarquee, false)
+        else if (window.attachEvent)
+            window.attachEvent("onload", initializemarquee)
+        else if (document.getElementById)
+            window.onload = initializemarquee
+    });
+
+</script>
+
+
+
+</div><!-- End_Module_1357 --></div>
+	<div class="clear"></div>
+</div>
+</div></div>
+                </div>
+                <div id="dnn_VideoContent" class="DNNEmptyPane">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/content-->
+    <div id="footer">
+        <div class="five-cols">
+            <div id="dnn_footerLeftOuterPane" class="footerPane spacingRight col1">
+            <div class="DnnModule DnnModule-DDRMenu DnnModule-1115"><a name="1115"></a>
+<div class="DNNContainer_Title_h2 SpacingBottom">
+    <h2><span id="dnn_ctr1115_dnnTITLE_titleLabel" class="TitleH2">Actividad</span>
+
+
+</h2>
+    <div id="dnn_ctr1115_ContentPane"><!-- Start_Module_1115 --><div id="dnn_ctr1115_ModuleContent" class="DNNModuleContent ModDDRMenuC">
+	<!-- DDRmenu v02.00.01 - Simple2 template --><!--SEO NOINDEX-->
+
+    <ul>
+	    
+	<li>
+		
+		<a href="http://www.tucamarapr.org/dnncamara/web/ActividadLegislativa/SesionesyVistas.aspx" target="">Sesiones y Vistas</a>
+		
+	</li>
+
+	<li>
+		
+		<a href="http://www.tucamarapr.org/dnncamara/web/ActividadLegislativa/Votaciones.aspx" target="">Votaciones</a>
+		
+	</li>
+
+	<li>
+		
+		<a href="http://www.tucamarapr.org/dnncamara/web/ActividadLegislativa/ComisionesyProyectosEspeciales.aspx" target="">Comisiones y Proyectos Especiales</a>
+		
+	</li>
+
+	<li>
+		
+		<a href="http://www.tucamarapr.org/dnncamara/web/ActividadLegislativa/TramiteLegislativo.aspx" target="">Tramite Legislativo</a>
+		
+	</li>
+
+	<li>
+		
+		<a href="http://www.tucamarapr.org/dnncamara/web/ActividadLegislativa/Asistencia.aspx" target="">Asistencia</a>
+		
+	</li>
+
+	<li>
+		
+		<a href="http://www.tucamarapr.org/dnncamara/web/ActividadLegislativa/Noticias.aspx" target="">Noticias</a>
+		
+	</li>
+
+	<li>
+		
+		<a href="http://www.tucamarapr.org/dnncamara/web/ActividadLegislativa/Cabilderos.aspx" target="">Cabilderos</a>
+		
+	</li>
+
+	<li>
+		
+		<a href="http://www.tucamarapr.org/dnncamara/web/Prensa/TuC&#225;maraenVivo.aspx" target="">Tu C&#225;mara En Vivo</a>
+		
+	</li>
+
+    </ul>
+
+<!--END SEO-->
+
+
+
+</div><!-- End_Module_1115 --></div>
+	<div class="clear"></div>
+</div>
+</div></div>
+            <div id="dnn_footerLeftPane" class="footerPane spacingRight col2">
+            <div class="DnnModule DnnModule-DDRMenu DnnModule-1111"><a name="1111"></a>
+<div class="DNNContainer_Title_h2 SpacingBottom">
+    <h2><span id="dnn_ctr1111_dnnTITLE_titleLabel" class="TitleH2">Presidencia</span>
+
+
+</h2>
+    <div id="dnn_ctr1111_ContentPane"><!-- Start_Module_1111 --><div id="dnn_ctr1111_ModuleContent" class="DNNModuleContent ModDDRMenuC">
+	<!-- DDRmenu v02.00.01 - Simple2 template --><!--SEO NOINDEX-->
+
+    <ul>
+	    
+	<li>
+		
+		<a href="http://tucamarapr.org/dnncamara/ComposiciondelaCamara/biografia.aspx?rep=39" target="">Biograf&#237;a del Presidente</a>
+		
+	</li>
+
+	<li>
+		
+		<a href="http://www.tucamarapr.org/dnncamara/web/Presidencia/OrdenesAdministrativas.aspx" target="">Ordenes Administrativas</a>
+		
+	</li>
+
+    </ul>
+
+<!--END SEO-->
+
+
+
+</div><!-- End_Module_1111 --></div>
+	<div class="clear"></div>
+</div>
+</div></div>
+            <div id="dnn_footerCenterPane" class="footerPane spacingRight col3">
+            <div class="DnnModule DnnModule-DDRMenu DnnModule-1112"><a name="1112"></a>
+<div class="DNNContainer_Title_h2 SpacingBottom">
+    <h2><span id="dnn_ctr1112_dnnTITLE_titleLabel" class="TitleH2">COMPOSICIÓN DE LA CÁMARA</span>
+
+
+</h2>
+    <div id="dnn_ctr1112_ContentPane"><!-- Start_Module_1112 --><div id="dnn_ctr1112_ModuleContent" class="DNNModuleContent ModDDRMenuC">
+	<!-- DDRmenu v02.00.01 - Simple2 template --><!--SEO NOINDEX-->
+
+    <ul>
+	    
+	<li>
+		
+		<a href="http://www.tucamarapr.org/dnncamara/web/ComposiciondelaCamara/Biografia.aspx" target="">Biografia</a>
+		
+	</li>
+
+	<li>
+		
+		<a href="http://www.tucamarapr.org/dnncamara/web/ComposiciondelaCamara/HistoriadelaCamara.aspx" target="">Historia de la Camara</a>
+		
+	</li>
+
+    </ul>
+
+<!--END SEO-->
+
+
+
+</div><!-- End_Module_1112 --></div>
+	<div class="clear"></div>
+</div>
+</div></div>
+            <div id="dnn_footerRightPane" class="footerPane spacingRight col4">
+            <div class="DnnModule DnnModule-DDRMenu DnnModule-1113"><a name="1113"></a>
+<div class="DNNContainer_Title_h2 SpacingBottom">
+    <h2><span id="dnn_ctr1113_dnnTITLE_titleLabel" class="TitleH2">La Casa Grande</span>
+
+
+</h2>
+    <div id="dnn_ctr1113_ContentPane"><!-- Start_Module_1113 --><div id="dnn_ctr1113_ModuleContent" class="DNNModuleContent ModDDRMenuC">
+	<!-- DDRmenu v02.00.01 - Simple2 template --><!--SEO NOINDEX-->
+
+    <ul>
+	    
+	<li>
+		
+		<a href="http://tucamarapr.org/dnncamara/web/ComposiciondelaCamara.aspx#rep" target="">Contacto con Representantes</a>
+		
+	</li>
+
+	<li>
+		
+		<a href="http://www.tucamarapr.org/dnncamara/web/Informaci&#243;ndelaC&#225;mara/CompartetusIdeas.aspx" target="">Comparte tus Ideas</a>
+		
+	</li>
+
+	<li>
+		
+		<a href="http://www.tucamarapr.org/dnncamara/web/Informaci&#243;ndelaC&#225;mara/Capitolio.aspx" target="">Capitolio</a>
+		
+	</li>
+
+	<li>
+		
+		<a href="http://www.tucamarapr.org/dnncamara/web/Informaci&#243;ndelaC&#225;mara/Enlaces.aspx" target="">Enlaces</a>
+		
+	</li>
+
+	<li>
+		
+		<a href="http://www.tucamarapr.org/dnncamara/web/Informaci&#243;ndelaC&#225;mara/OfertasdeEmpleos.aspx" target="">Ofertas de Empleos</a>
+		
+	</li>
+
+    </ul>
+
+<!--END SEO-->
+
+
+
+</div><!-- End_Module_1113 --></div>
+	<div class="clear"></div>
+</div>
+</div></div>
+            <div id="dnn_footerRightOuterPane" class="footerPaneRight col5">
+            <div class="DnnModule DnnModule-DDRMenu DnnModule-1114"><a name="1114"></a>
+<div class="DNNContainer_Title_h2 SpacingBottom">
+    <h2><span id="dnn_ctr1114_dnnTITLE_titleLabel" class="TitleH2">Prensa</span>
+
+
+</h2>
+    <div id="dnn_ctr1114_ContentPane"><!-- Start_Module_1114 --><div id="dnn_ctr1114_ModuleContent" class="DNNModuleContent ModDDRMenuC">
+	<!-- DDRmenu v02.00.01 - Simple2 template --><!--SEO NOINDEX-->
+
+    <ul>
+	    
+	<li>
+		
+		<a href="http://www.tucamarapr.org/dnncamara/web/Prensa/Calendario.aspx" target="">Calendario</a>
+		
+	</li>
+
+	<li>
+		
+		<a href="http://www.tucamarapr.org/dnncamara/web/Prensa/TuC&#225;maraenVivo.aspx" target="">Tu C&#225;mara en Vivo</a>
+		
+	</li>
+
+    </ul>
+
+<!--END SEO-->
+
+
+
+</div><!-- End_Module_1114 --></div>
+	<div class="clear"></div>
+</div>
+</div></div>
+        </div>
+        <div class="footer-b">
+            <div class="footer-logos">
+                <div id="dnn_footerlogos">
+                <div class="DnnModule DnnModule-DNN_HTML DnnModule-1498"><a name="1498"></a>
+<div class="DNNContainer_noTitle">
+	<div id="dnn_ctr1498_ContentPane"><!-- Start_Module_1498 --><div id="dnn_ctr1498_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr1498_HtmlModule_lblContent" class="Normal">
+		<div class="logo_list_footer"><a target="_blank" href="http://www2.pr.gov/Pages/default.aspx"><img alt="Gobierno de Puerto Rico [PR.GOV]" src="/dnncamara/portals/9/Images/pr.gov.png" /></a> <a target="_blank" href="http://www.fortaleza.gobierno.pr/"><img alt="Enlace a Fortaleza" src="/dnncamara/portals/9/Images/logo.png" style="width: 67px; height: 57px;" /></a> <a target="_blank" href="http://senado.pr.gov/Pages/default.aspx"><img alt="Enlace a Senado de Puerto Rico" src="/dnncamara/portals/9/Images/senadologo.png" style="width: 52px; height: 45px;" /></a><a href="https://correo.camaraderepresentantes.org/owa/auth/logon.aspx?replaceCurrent=1&amp;url=https%3a%2f%2fcorreo.camaraderepresentantes.org%2fowa%2f" target="_blank"><img alt="" src="/dnncamara/portals/9/Images/OWA%20logo2_thumb.png" /></a> </div>
+	</div>
+
+</div><!-- End_Module_1498 --></div>
+	<div class="clear"></div>
+</div>
+</div></div>
+            </div>
+            <ul class="add-links">
+                
+                <div id="dnn_footerLinks">
+                <div class="DnnModule DnnModule-DNN_HTML DnnModule-1121"><a name="1121"></a>
+<div class="DNNContainer_noTitle">
+	<div id="dnn_ctr1121_ContentPane"><!-- Start_Module_1121 --><div id="dnn_ctr1121_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr1121_HtmlModule_lblContent" class="Normal">
+		<li><span style="color: #eeece1;">C&aacute;mara de Representantes de Puerto Rico</span></li>
+<li><a href="/dnncamara/web/en-us/condicionesdeuso.aspx">Condiciones de Uso</a></li>
+<li><a href="/dnncamara/web/en-us/accesibilidad.aspx">Accesibilidad</a></li>
+<br />
+<br />
+<a target="_blank" href="#"><img alt="Logo de accessibilidad" src="/dnncamara/portals/9/Images/Camara_de_Representantes.png" style="width: 330px; border-radius: 1px;" /></a>
+	</div>
+
+</div><!-- End_Module_1121 --></div>
+	<div class="clear"></div>
+</div>
+</div></div>
+            </ul>
+            <div class="container">
+                <div id="dnn_contactInfo" class="contact-info">
+                <div class="DnnModule DnnModule-DNN_HTML DnnModule-1119"><a name="1119"></a>
+<div class="DNNContainer_noTitle">
+	<div id="dnn_ctr1119_ContentPane"><!-- Start_Module_1119 --><div id="dnn_ctr1119_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr1119_HtmlModule_lblContent" class="Normal">
+		<span style="color: #eeece1;">PO Box 9022228<br />
+</span>
+<address><span style="color: #eeece1;">
+San Juan, Puerto Rico, 00902-2228</span></address>
+<span style="color: #eeece1;">
+Tel&eacute;fono : 787.721.6040<br />
+TTY: 787.721.1109 / 787.725.3644</span><br />
+<span style="color: #eeece1;">
+Email:</span> <a href="mailto:info@camaraderepresentantes.org">
+info@camaraderepresentantes.org</a>
+	</div>
+
+</div><!-- End_Module_1119 --></div>
+	<div class="clear"></div>
+</div>
+</div></div>
+                <strong class="logo"><a href="../inicio.aspx">C&Aacute;MARA
+                    DE
+                    <br />
+                    ESTADO LIBRE ASOCIADO DE PUERTO RICO</a></strong>
+            </div>
+        </div>
+        <!--/footer-->
+    </div>
+    <!--/siteWrapper-->
+</div>
+
+        <input name="ScrollTop" type="hidden" id="ScrollTop" />
+        <input name="__dnnVariable" type="hidden" id="__dnnVariable" autocomplete="off" value="`{`__sp`:`/dnncamara/js/`,`__scdoff`:`1`,`dnn.scripts.js.resx`:`/dnncamara/WebResource.axd?d=ttdGA1JauX-QG0Ots052dNRYUyyRVtXYmyNcUTxMZYHWyQ7Tbsw32gDzKWElKeiA0Wl-gG6qX5gYscy0KJywZ0rlOpjjy7Ik9vzfI18x_k4rKE9G0\u0026t=636662325007743350`}" />
+        
+    
+<script type="text/javascript" src="/dnncamara/Resources/Shared/scripts/initWidgets.js" ></script></form>
+    
+    
+</body>
+</html>
