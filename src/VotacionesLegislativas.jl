@@ -109,7 +109,7 @@ function votaciones_de_la_cámara!()
 end
 votaciones_de_la_cámara!()
 
-# Para acutalizar data/Cámara/cámara.tsv
+# Para actualizar data/Cámara/cámara.tsv
 # parse_legid(data, idx) =
 #     (measureid = match(r"(?<=measureid=).*(?=&)", data[idx + 2]).match,
 #      voteid = match(r"(?<=voteid=).*(?=')", data[idx + 2]).match)
