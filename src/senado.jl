@@ -2,24 +2,6 @@ using PDFIO, Dates, DataFrames, CSV
 using PDFIO: PD.PDDocImpl, PD.PDPageImpl
 
 const MONTHS = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
-doc = pdDocOpen(joinpath("data", "senado", "2011_06_30_2011_09_01.pdf"))
-npage = pdDocGetPageCount(doc)
-i = 1
-page = pdDocGetPage(doc, i)
-io = IOBuffer()
-pdPageExtractText(io, page)
-text = String(take!(io))
-lns = split(text, '\n')
-medida, resultado = split(strip(lns[3]), r"\s{2,}")
-fecha = match(r"(?<=, )\d{1,2} de \w+ de \d{4}", lns[4]).match |>
-    (obj -> Date(parse(Int, match(r"\d{4}$", obj).match),
-                 findfirst(isequal(match(r"(?<=de )\w+(?= de)", fecha).match), MONTHS),
-                 parse(Int, match(r"\d{1,2}", obj).match)))
-votos = split.(strip.(lns[findfirst(x -> occursin("Votante", x), lns) + 1:end]), r"\s{2,}")
-first.(votos)
-last.(votos)
-data = DataFrame(fecha = fecha, medida = medida, votante = first.(votos), voto = last.(votos))
-
 """
     senate_rollcall(page::PDPageImpl)
 """

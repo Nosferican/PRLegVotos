@@ -9,7 +9,12 @@ Información sobre las votaciones de medidas legislativas de Puerto Rico.
 
 ## Información
 
-- Disponible en `data/2013-2016.db`
-- Cobertura: `2013 - 2016`
-- Tablas `Cámara` y `Senado`
-- Campos: `tipo`, `número`, `fecha`, `votante`, `voto`
+## Cámara
+
+- `data/cámara.csv`
+- `[2013-01-15, 2016-06-25]`
+
+## Senado
+
+- `data/senado.csv`
+- `[2011-06-30, 2020-10-05]`

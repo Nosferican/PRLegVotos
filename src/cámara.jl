@@ -8,11 +8,6 @@ html = parsehtml(String(read(joinpath("data", "cámara", "Votaciones.html"))))
 
 sel = Selector("span.measure-name > a")
 medidas = [ string("http://www.tucamarapr.org/dnncamara/web/actividadlegislativa/", getattr(x, "href")) for x in eachmatch(sel, html.root) ]
-# files = string.(SubString.(medidas, range.(78, lastindex.(medidas), step = 1)), ".html")
-# filter!(file -> file ∉ readdir(joinpath("data", "cámara")), files)
-
-# response = request("GET",
-                #    string("http://www.tucamarapr.org/dnncamara/web/actividadlegislativa/", SubString(files[1], range(1, lastindex(files[1]) - 5))))
 
 for medida in medidas
     filepath = string(SubString(medida, 78:lastindex(medida)), ".html")
